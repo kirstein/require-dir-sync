@@ -1,6 +1,6 @@
 {
   "name": "require-dir-sync",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Sync require for all the files in a given folder",
   "homepage": "https://github.com/kirstein/require-dir-sync",
   "repository": {

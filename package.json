@@ -1,0 +1,45 @@
+{
+  "name": "require-dir-sync",
+  "version": "0.0.0",
+  "description": "Sync require for all the files in a given folder",
+  "homepage": "https://github.com/kirstein/require-dir-sync",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kirstein/require-dir-sync.git"
+  },
+  "scripts": {
+    "test": "grunt test",
+    "prepublish": "grunt build"
+  },
+  "config": {
+    "blanket": {
+      "loader": "./node-loaders/coffee-script",
+      "data-cover-only": [
+        "src"
+      ],
+      "data-cover-never": "node_modules"
+    }
+  },
+  "main": "./dist/require-dir-sync",
+  "author": {
+    "name": "Mikk Kirstein",
+    "email": "mikk@kolmas.org",
+    "url": "https://github.com/kirstein"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "blanket": "^1.1.5",
+    "coffee-script": "~1.7.1",
+    "grunt": "~0.4.4",
+    "grunt-bump": "0.0.13",
+    "grunt-coffeelint": "0.0.10",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-cov": "^0.2.1",
+    "load-grunt-tasks": "^0.4.0",
+    "should": "^3.2.0-beta1",
+    "sinon": "^1.10.3"
+  },
+  "dependencies": {}
+}

@@ -28,6 +28,12 @@ describe 'require-dir', ->
       res = requireDir FIXTURE_DIR, ignore: [ 'hello', /requireTest/ ]
       Object.keys(res).length.should.eql 0
 
+    it 'should ignore folders that match the ignore statements', ->
+      dir = path.join FIXTURE_DIR, 'recursive'
+      res = requireDir dir, ignore: /recursive/, recursive: true
+      Object.keys(res).length.should.eql 0
+
+
   describe 'extensions', ->
     it 'should only load files whos extensions are added', ->
       res = requireDir FIXTURE_DIR, ext: [ 'js' ]
